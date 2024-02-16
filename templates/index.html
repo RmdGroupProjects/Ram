@@ -1,0 +1,56 @@
+{% load static %}
+<html>
+<head>
+    <title>Ramudu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.1">
+    <link rel="stylesheet" href="{% static '../media/media/display.css' %}">
+</head>
+<body>
+<h3>Ramudu Creations</h3>
+<form action="/send/" method="post">
+    {% csrf_token %}
+    <table  class="btn" >
+        <tr>
+            <td><h4>Name:</h4><input type="text" name="name" placeholder="Enter Your Name" required></td>
+            <td><h4>Age:</h4><input type="date" name="age" required></td>
+        </tr>
+        <tr>
+            <td><h4>Gender:</h4>
+                <input type="radio" name="gender" value="male" required>Male
+                <input type="radio" name="gender" value="Female" required>Female
+            </td>
+            <td><h4>Phone:</h4><input type="text" name="phone" placeholder="Enter your Phone Number" required></td>
+        </tr>
+        <tr>
+            <td><h4>Username:</h4><input type="text" name="username" placeholder="Enter Username" required></td>
+            <td><h4>Password:</h4><input type="password" name="password" placeholder="Enter Password" required></td>
+        </tr>
+        <tr>
+            <td><h4>House:</h4><input type="text" name="house" placeholder="Enter Your House Number" required></td>
+            <td><h4>Village:</h4><input type="text" name="Village" placeholder="Enter Your Village" required></td>
+        </tr>
+        <tr>
+            <td><h4>Mandal:</h4><input type="text" name="Mandal" placeholder="Enter Your Mandal" required></td>
+            <td><h4>District:</h4><input type="text" name="Distaic" placeholder="Enter Your Distaic" required></td>
+        </tr>
+        <tr>
+            <td><h4>States:</h4><input type="text" name="States" placeholder="Enter Your States"></td>
+            <td><h4>PinCode:</h4><input type="text" name="PinCode" placeholder="Enter Your PinCode"></td>
+        </tr>
+        <tr align="center">
+            <td align="center">
+                <h4 align="center"><button type="submit">Submit</button></h4>
+            <td><h4>{{ message }}</h4></td>
+            </td>
+            
+        </tr>
+        <tr>
+             <td>
+                 <a href="/login/"><span>Click On Login ! Are you Register ?</span></a>
+            </td>
+        </tr>
+        
+    </table>
+</form>
+</body>
+</html>

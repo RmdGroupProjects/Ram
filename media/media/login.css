@@ -1,0 +1,60 @@
+    html {
+  font-size: 30px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: darkslategray ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+.btn::before {
+
+  position: absolute;
+  left: 0.25rem;
+  top: 0.5rem;
+  height: 102%;
+  width: 102%;
+  z-index: -1;
+  transition: all 0.4s ease;
+}
+
+.btn:hover::before {
+  box-shadow: none;
+  left: 0;
+  top: 0;
+  width: 900%;
+  height: 100%;
+}
+    .tools
+    {
+      position:absolute;
+      top: 25px;
+      left:1px;
+      z-index: 2;
+    }
+body{
+        margin-right: 60px;
+         border-spacing: 6px;
+            border-color: blue;
+            background-image : url("/media/media/wp2665203.jpg");
+             background-repeat: no-repeat;
+            background-position: center;
+             background-size: 400px 530px;
+
+        }
+
+
+h4 {
+    margin-right: 90px;
+    background-position-y: center;
+    color: ghostwhite;
+}
+.inp{
+    width: 200px;
+    height: 26px;
+}
+

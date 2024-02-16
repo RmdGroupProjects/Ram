@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Click Counter Thumbs Up</title>
+</head>
+<body>
+
+<button id="thumbsUpButton">&#128077;</button>
+<p>Click Count: <span id="clickCount">0</span></p>
+
+<script>
+  var thumbsUpButton = document.getElementById('thumbsUpButton');
+  var clickCountElement = document.getElementById('clickCount');
+  var clickCount = 0;
+
+  thumbsUpButton.addEventListener('click', function() {
+    if (clickCount === 0) {
+      // If count is 0, increase it on the first click
+      clickCount++;
+    } else {
+      // If count is not 0, decrease it on subsequent clicks
+      clickCount--;
+    }
+
+    // Update the display with the current click count
+    clickCountElement.textContent = clickCount;
+  });
+</script>
+
+</body>
+</html>

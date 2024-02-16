@@ -1,0 +1,30 @@
+{% load static %}
+<html>
+<head>
+    <title>Ramudu</title>
+    <link rel="stylesheet" href="{% static '../media/media/login.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<form action="/log/" method="post">
+    {% csrf_token %}
+    <table>
+        <tr>
+            <td>
+                <h4>Username :</h4><input class="inp" type="text" name="username" placeholder="Enter Username" required>
+            </td>
+        </tr>
+        <tr>
+            <td><h4>Password :</h4><input class="inp" type="text" name="password" placeholder="Enter Password" required></td>
+        </tr>
+        <tr align="center">
+            <td align="center"><button type="submit">Submit</button></td>
+        </tr>
+        <tr>
+            <td><p style="color: chartreuse">{{ qr }}</p></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
